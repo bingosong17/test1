@@ -23,4 +23,11 @@ class FirmSerializer(serializers.ModelSerializer):
     class Meta:
         model = Firm
         # fields = ['url', 'username', 'email', 'groups']
-        exclude = ['is_active', 'create_time']
+        fields = "__all__"
+        # exclude = ['is_active', 'create_time']
+
+
+class LicenceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Firm
+        fields = "__all__"
