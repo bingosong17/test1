@@ -21,8 +21,13 @@ from django.contrib.auth.models import User
 class FirmViewSet(viewsets.ModelViewSet):
     authentication_classes = [BasicAuthentication]
     permission_classes = [IsAuthenticated]
-    queryset = Firm.objects.all().order_by('-id')
+    queryset = Firm.objects.filter(is_del=False).order_by('-id')
     serializer_class = FirmSerializer
+    lookup_field = 'name'
+
+    def perform_destroy(self, instance):
+        instance.is_del = True
+        instance.save()
 
 
 class LoginView(APIView):

@@ -22,8 +22,8 @@ class UserSerialize(serializers.ModelSerializer):
 class FirmSerializer(serializers.ModelSerializer):
     class Meta:
         model = Firm
-        # fields = ['url', 'username', 'email', 'groups']
-        fields = "__all__"
+        fields = ['is_del']
+        # fields = "__all__"
         # exclude = ['is_active', 'create_time']
 
 

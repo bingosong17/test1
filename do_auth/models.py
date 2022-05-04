@@ -5,10 +5,11 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Firm(models.Model):
-    name = models.CharField(max_length=20, null=False)
+    name = models.CharField(max_length=20, null=False, unique=True)
     is_active = models.BooleanField(default=True)
     create_time = models.DateTimeField(auto_now_add=True)
-    info = models.TextField(default=None, null=True)
+    info = models.TextField(default=None, null=True, blank=True)
+    is_del = models.BooleanField(default=False)
 
 
 class Licence(models.Model):
@@ -35,7 +36,30 @@ class Licence(models.Model):
     limit = models.IntegerField(default=0)
     is_active = models.BooleanField(default=True)
     create_time = models.DateTimeField(auto_now_add=True)
-    info = models.TextField(default=None, null=True)
+    info = models.TextField(default=None, null=True, blank=True)
     lic = models.CharField(max_length=32, null=False)
+    is_del = models.BooleanField(default=False)
 
 
+class Lsource(models.Model):
+    licence = models.ForeignKey(Licence, on_delete=models.CASCADE, related_name="lsource_list")
+    name = models.CharField(max_length=100, null=False)
+    path = models.CharField(max_length=100, null=False)
+    version = models.CharField(max_length=100, null=False)
+
+
+class Project(models.Model):
+    create_manager = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, default='')
+    create_firm = models.ForeignKey(Firm, on_delete=models.SET_NULL, null=True, default='')
+    name = models.CharField(max_length=20, null=False)
+    done = models.IntegerField(default=0)
+    success = models.IntegerField(default=0)
+    temp_dest_path = models.CharField(max_length=100, default='')
+    log_path = models.CharField(max_length=100, default='')
+    temp_name = models.CharField(max_length=100, default='')
+
+
+class SDKinfo(models.Model):
+    project = models.OneToOneField(Project, on_delete=models.SET_NULL, null=True, default='')
+    MD5 = models.TextField(default='')
+    is_del = models.BooleanField(default=False)
