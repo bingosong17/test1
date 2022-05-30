@@ -1,0 +1,72 @@
+2020-12-22 14:02:05.795 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 查询基础数据, TestCase ID: fe6e6236-5885-46b6-9d3e-71d518bbf19e
+2020-12-22 14:02:05.796 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/stats/common >>>>>>
+2020-12-22 14:02:06.171 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 14:02:06.173 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 14:02:06.175 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://gateway.alpha.pinpianyi.cn/ppy-pinpin/stats/common
+headers  : {
+    "User-Agent": "Pinpin/3.7.0 (iPhone; iOS 11.1.2; Scale/3.00)",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmfyUO9d8MaLyHC/UF+KSDnA==",
+    "deviceId": "0380efdbdb0938af0d7a3852519f361a86ff",
+    "serviceName": "NEW-PP",
+    "Content-Type": "application/json",
+    "Accept-Language": "zh-Hans-CN;q=1",
+    "HRUN-Request-ID": "HRUN-fe6e6236-5885-46b6-9d3e-71d518bbf19e-925797"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 14:02:06.178 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 06:02:06 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 6200,
+    "msg": "服务调用异常，请稍后重试",
+    "traceMsg": "underlying service internal exception, traceId: null, error occurred at application: ppy-pinpin-app-core, serviceName: selectBdUnsignUser",
+    "timestamp": 1608616926,
+    "signType": null,
+    "sign": null,
+    "body": null
+}
+
+2020-12-22 14:02:06.179 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 374.2 ms, response_length: 0 bytes
+2020-12-22 14:02:06.181 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 14:02:06.183 | ERROR    | httprunner.response:validate:263 - assert body.statusCode equal 2000(int)	==> fail
+check_item: body.statusCode
+check_value: 6200(int)
+assert_method: equal
+expect_value: 2000(int)
+2020-12-22 14:02:06.185 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: https://gateway.alpha.pinpianyi.cn/ppy-pinpin/stats/common
+method: GET
+headers: {'sessionId': '+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmfyUO9d8MaLyHC/UF+KSDnA==', 'deviceId': '0380efdbdb0938af0d7a3852519f361a86ff', 'serviceName': 'NEW-PP', 'Content-Type': 'application/json', 'Accept': '*/*', 'User-Agent': 'Pinpin/3.7.0 (iPhone; iOS 11.1.2; Scale/3.00)', 'Accept-Language': 'zh-Hans-CN;q=1', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'HRUN-Request-ID': 'HRUN-fe6e6236-5885-46b6-9d3e-71d518bbf19e-925797'}
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 200
+headers: {'Server': 'nginx/1.16.1', 'Date': 'Tue, 22 Dec 2020 06:02:06 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive'}
+body: '{"statusCode":6200,"msg":"服务调用异常，请稍后重试","traceMsg":"underlying service internal exception, traceId: null, error occurred at application: ppy-pinpin-app-core, serviceName: selectBdUnsignUser","timestamp":1608616926,"signType":null,"sign":null,"body":null}'
+

@@ -1,0 +1,6 @@
+2020-12-22 16:04:17.312 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 私海店铺查询, TestCase ID: 588a09f2-1564-46a0-9a75-f4a33a495208
+2020-12-22 16:04:17.316 | ERROR    | httprunner.parser:parse_string:343 - call function error:
+func_name: getSession
+args: ['ppApp', '15757113586']
+kwargs: {}
+KeyError: 'test33010015757113586'

@@ -1,0 +1,78 @@
+2020-12-22 16:29:01.246 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 全部订单列表, TestCase ID: 4c9480e2-ae2d-4e07-88d0-5174144e1719
+2020-12-22 16:29:01.246 | INFO     | httprunner.runner:__run_step:292 - run step begin: /dev2_t/ppy-op-api/order/queryAllOrders >>>>>>
+2020-12-22 16:29:01.278 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 16:29:01.279 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 16:29:01.280 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://web.dev2.pinpianyi.cn/test_t/ppy-op-api/order/queryAllOrders?isPay=&payType=&status=&queryType=&cloudType=&labelCode=&orderSource=&backGoodsType=&settleStatus=&spellZoneCode=&logisticsStatus=&isInsufficient=&orderClassify=&orderNo=2020081315332711613328&pageNum=1&pageSize=25&sort=true
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmBbeI0NJNReJwrWE/gJjqQg==",
+    "systemCode": "yypp",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-4c9480e2-ae2d-4e07-88d0-5174144e1719-741247"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 16:29:01.281 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 08:29:01 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, Origin, X-Requested-With, Content-Type, Accept"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 4001,
+    "msg": "身份验证无效",
+    "traceMsg": null,
+    "timestamp": null,
+    "signType": null,
+    "sign": null,
+    "body": null
+}
+
+2020-12-22 16:29:01.282 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 31.27 ms, response_length: 0 bytes
+2020-12-22 16:29:01.282 | INFO     | httprunner.response:extract:176 - extract mapping: {'orderList': None}
+2020-12-22 16:29:01.283 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 16:29:01.283 | ERROR    | httprunner.response:validate:263 - assert body.statusCode equal 2000(int)	==> fail
+check_item: body.statusCode
+check_value: 4001(int)
+assert_method: equal
+expect_value: 2000(int)
+2020-12-22 16:29:01.284 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: https://web.dev2.pinpianyi.cn/test_t/ppy-op-api/order/queryAllOrders
+method: GET
+headers: {'Connection': 'keep-alive', 'sessionId': '+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmBbeI0NJNReJwrWE/gJjqQg==', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36', 'systemCode': 'yypp', 'Accept': '*/*', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7', 'HRUN-Request-ID': 'HRUN-4c9480e2-ae2d-4e07-88d0-5174144e1719-741247'}
+params: {'isPay': '', 'payType': '', 'status': '', 'queryType': '', 'cloudType': '', 'labelCode': '', 'orderSource': '', 'backGoodsType': '', 'settleStatus': '', 'spellZoneCode': '', 'logisticsStatus': '', 'isInsufficient': '', 'orderClassify': '', 'orderNo': '2020081315332711613328', 'pageNum': '1', 'pageSize': '25', 'sort': 'true'}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 200
+headers: {'Server': 'nginx/1.16.1', 'Date': 'Tue, 22 Dec 2020 08:29:01 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, GET, PUT, OPTIONS, DELETE, PATCH', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Authorization, sign, sessionId, key, Origin, X-Requested-With, Content-Type, Accept'}
+body: '{"statusCode":4001,"msg":"身份验证无效","traceMsg":null,"timestamp":null,"signType":null,"sign":null,"body":null}'
+

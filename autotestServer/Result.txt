@@ -1,0 +1,86 @@
+商品查询(新增会员标签和类型)
+路径：/search/goods
+方法：get
+pass————冒烟测试
+<<<<<<<参数类型异常测试>>>>>>
+fail————goodsTag参数要求类型为string，使用integer类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595558665, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 1, 'goodsCategory': 'z', 'categoryId': 2, 'goodsName': 'e', 'sortType': 3, 'brandId': 5, 'pageNum': 5, 'pageSize': 3}
+fail————goodsCategory参数要求类型为string，使用integer类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595558665, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 'l', 'goodsCategory': 8, 'categoryId': 2, 'goodsName': 'e', 'sortType': 3, 'brandId': 5, 'pageNum': 5, 'pageSize': 3}
+pass————categoryId参数要求类型为integer，使用string类型测试
+fail————goodsName参数要求类型为string，使用integer类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595558665, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 'l', 'goodsCategory': 'z', 'categoryId': 2, 'goodsName': 1, 'sortType': 3, 'brandId': 5, 'pageNum': 5, 'pageSize': 3}
+pass————sortType参数要求类型为integer，使用string类型测试
+fail————brandId参数要求类型为integer，使用string类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595558665, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 'l', 'goodsCategory': 'z', 'categoryId': 2, 'goodsName': 'e', 'sortType': 3, 'brandId': 'q', 'pageNum': 5, 'pageSize': 3}
+pass————pageNum参数要求类型为integer，使用string类型测试
+pass————pageSize参数要求类型为integer，使用string类型测试
+<<<<<<参数必要性测试>>>>>>：
+pass————goodsTag参数要求为非必要，缺失类型测试
+pass————goodsCategory参数要求为非必要，缺失类型测试
+pass————categoryId参数要求为非必要，缺失类型测试
+fail————goodsName参数要求为非必要，缺失类型测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595558665, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'l', 'goodsCategory': 'z', 'categoryId': 2, 'sortType': 3, 'brandId': 5, 'pageNum': 5, 'pageSize': 3}
+pass————sortType参数要求为非必要，缺失类型测试
+pass————brandId参数要求为非必要，缺失类型测试
+fail————pageNum参数要求为必要，缺失类型测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595558665, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'l', 'goodsCategory': 'z', 'categoryId': 2, 'goodsName': 'e', 'sortType': 3, 'brandId': 5, 'pageSize': 3}
+fail————pageSize参数要求为必要，缺失类型测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595558665, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'l', 'goodsCategory': 'z', 'categoryId': 2, 'goodsName': 'e', 'sortType': 3, 'brandId': 5, 'pageNum': 5}
+pass————goodsTag特殊字符测试
+pass————goodsCategory特殊字符测试
+fail————goodsName特殊字符< >测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595558669, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'l', 'goodsCategory': 'z', 'categoryId': 2, 'goodsName': ' ', 'sortType': 3, 'brandId': 5, 'pageNum': 5, 'pageSize': 3}
+fail————接口耗时最长为：954ms,超过设定限定值500ms
+      请求数据：{"pageNum": 5, "pageSize": 3}
+商品查询(新增会员标签和类型)
+路径：/search/goods
+方法：get
+pass————冒烟测试
+<<<<<<<参数类型异常测试>>>>>>
+fail————goodsTag参数要求类型为string，使用integer类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595559370, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 6, 'goodsCategory': 'c', 'categoryId': 3, 'goodsName': 'j', 'sortType': 6, 'brandId': 1, 'pageNum': 1, 'pageSize': 6}
+fail————goodsCategory参数要求类型为string，使用integer类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595559370, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 'a', 'goodsCategory': 1, 'categoryId': 3, 'goodsName': 'j', 'sortType': 6, 'brandId': 1, 'pageNum': 1, 'pageSize': 6}
+pass————categoryId参数要求类型为integer，使用string类型测试
+fail————goodsName参数要求类型为string，使用integer类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595559370, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 'a', 'goodsCategory': 'c', 'categoryId': 3, 'goodsName': 8, 'sortType': 6, 'brandId': 1, 'pageNum': 1, 'pageSize': 6}
+pass————sortType参数要求类型为integer，使用string类型测试
+fail————brandId参数要求类型为integer，使用string类型测试
+      错误返回：{"statusCode": 2000, "msg": null, "traceMsg": "traceId: null", "timestamp": 1595559370, "signType": null, "sign": null, "body": {"pageNum": null, "pageSize": null, "pageCount": null, "totalSize": null, "pageData": [], "brandList": null, "categoryList": null, "wordList": null}}
+      请求数据：{'goodsTag': 'a', 'goodsCategory': 'c', 'categoryId': 3, 'goodsName': 'j', 'sortType': 6, 'brandId': 'm', 'pageNum': 1, 'pageSize': 6}
+pass————pageNum参数要求类型为integer，使用string类型测试
+pass————pageSize参数要求类型为integer，使用string类型测试
+<<<<<<参数必要性测试>>>>>>：
+pass————goodsTag参数要求为非必要，缺失类型测试
+pass————goodsCategory参数要求为非必要，缺失类型测试
+pass————categoryId参数要求为非必要，缺失类型测试
+fail————goodsName参数要求为非必要，缺失类型测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595559371, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'a', 'goodsCategory': 'c', 'categoryId': 3, 'sortType': 6, 'brandId': 1, 'pageNum': 1, 'pageSize': 6}
+pass————sortType参数要求为非必要，缺失类型测试
+pass————brandId参数要求为非必要，缺失类型测试
+fail————pageNum参数要求为必要，缺失类型测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595559371, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'a', 'goodsCategory': 'c', 'categoryId': 3, 'goodsName': 'j', 'sortType': 6, 'brandId': 1, 'pageSize': 6}
+fail————pageSize参数要求为必要，缺失类型测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595559371, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'a', 'goodsCategory': 'c', 'categoryId': 3, 'goodsName': 'j', 'sortType': 6, 'brandId': 1, 'pageNum': 1}
+pass————goodsTag特殊字符测试
+pass————goodsCategory特殊字符测试
+fail————goodsName特殊字符< >测试
+      错误返回：{"statusCode": 5000, "msg": "\u7cfb\u7edf\u9519\u8bef", "traceMsg": "traceId: null", "timestamp": 1595559390, "signType": null, "sign": null, "body": null}
+      请求数据：{'goodsTag': 'a', 'goodsCategory': 'c', 'categoryId': 3, 'goodsName': ' ', 'sortType': 6, 'brandId': 1, 'pageNum': 1, 'pageSize': 6}
+fail————接口耗时最长为：1225ms,超过设定限定值500ms
+      请求数据：{"goodsTag": " ", "goodsCategory": "c", "categoryId": 3, "goodsName": "j", "sortType": 6, "brandId": 1, "pageNum": 1, "pageSize": 6}

@@ -1,0 +1,63 @@
+2020-12-22 17:06:18.580 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 全部订单列表, TestCase ID: 6f420bbe-ce3f-4cb1-8ffb-a29c70d13b16
+2020-12-22 17:06:18.581 | INFO     | httprunner.runner:__run_step:292 - run step begin: /dev2_t/ppy-op-api/order/queryAllOrders >>>>>>
+2020-12-22 17:06:18.622 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:06:18.622 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:06:18.623 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://web.dev2.pinpianyi.cn/test_t/ppy-op-api/order/queryAllOrders?isPay=&payType=&status=&queryType=&cloudType=&labelCode=&orderSource=&backGoodsType=&settleStatus=&spellZoneCode=&logisticsStatus=&isInsufficient=&orderClassify=&orderNo=2020081315332711613328&pageNum=1&pageSize=25&sort=true
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "1ed03cc2f08f44d69c54e3da8778195d",
+    "systemCode": "yypp",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-6f420bbe-ce3f-4cb1-8ffb-a29c70d13b16-978581"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 17:06:18.625 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:06:18 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, Origin, X-Requested-With, Content-Type, Accept"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: 1608627978720",
+    "timestamp": 1608627978,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "pageNum": 1,
+        "pageSize": 25,
+        "pageCount": 0,
+        "totalSize": 0,
+        "pageData": []
+    }
+}
+
+2020-12-22 17:06:18.625 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 40.08 ms, response_length: 0 bytes
+2020-12-22 17:06:18.626 | INFO     | httprunner.response:extract:176 - extract mapping: {'orderList': []}
+2020-12-22 17:06:18.626 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:06:18.627 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:06:18.627 | INFO     | httprunner.runner:__run_step:304 - run step end: /dev2_t/ppy-op-api/order/queryAllOrders <<<<<<
+

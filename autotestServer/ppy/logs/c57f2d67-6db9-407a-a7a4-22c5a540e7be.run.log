@@ -1,0 +1,58 @@
+2020-12-22 15:29:14.173 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 查询基础数据, TestCase ID: c57f2d67-6db9-407a-a7a4-22c5a540e7be
+2020-12-22 15:29:14.174 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/stats/common >>>>>>
+2020-12-22 15:29:15.124 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 15:29:15.124 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 15:29:15.126 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://gateway.test.pinpianyi.cn/ppy-pinpin/stats/common
+headers  : {
+    "User-Agent": "Pinpin/3.7.0 (iPhone; iOS 11.1.2; Scale/3.00)",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmWzY8b43v01G5OM2ArG7aoA==",
+    "deviceId": "0380efdbdb0938af0d7a3852519f361a86ff",
+    "serviceName": "NEW-PP",
+    "Content-Type": "application/json",
+    "Accept-Language": "zh-Hans-CN;q=1",
+    "HRUN-Request-ID": "HRUN-c57f2d67-6db9-407a-a7a4-22c5a540e7be-154174"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 15:29:15.127 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 07:29:15 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1608622155,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "rank": 2,
+        "unSign": 7,
+        "shops": 43,
+        "sevenDays": 43,
+        "thirtyDays": 43,
+        "orderShops": 0
+    }
+}
+
+2020-12-22 15:29:15.127 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 949.47 ms, response_length: 0 bytes
+2020-12-22 15:29:15.128 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 15:29:15.128 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 15:29:15.129 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/stats/common <<<<<<
+

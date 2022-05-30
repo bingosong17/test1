@@ -1,0 +1,13 @@
+2020-12-22 16:04:17.295 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: 5b290e24-a342-4740-b3c0-96a9a516f848
+2020-12-22 16:04:17.312 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 私海店铺查询, TestCase ID: 588a09f2-1564-46a0-9a75-f4a33a495208
+2020-12-22 16:04:17.316 | ERROR    | httprunner.parser:parse_string:343 - call function error:
+func_name: getSession
+args: ['ppApp', '15757113586']
+kwargs: {}
+KeyError: 'test33010015757113586'
+2020-12-22 16:04:17.318 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/bingo/Desktop/autotest/httprunnerScripts/logs/588a09f2-1564-46a0-9a75-f4a33a495208.run.log
+2020-12-22 16:04:17.318 | ERROR    | httprunner.parser:parse_string:343 - call function error:
+func_name: 拼拼公私海店铺生成个未拜访的店铺id
+args: ['15757113586', 0]
+kwargs: {}
+KeyError: 'test33010015757113586'

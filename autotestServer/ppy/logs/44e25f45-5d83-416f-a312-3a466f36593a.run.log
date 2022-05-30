@@ -1,0 +1,64 @@
+2020-12-22 14:02:17.475 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 检查打卡条件是否满足, TestCase ID: 44e25f45-5d83-416f-a312-3a466f36593a
+2020-12-22 14:02:17.477 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/visitRecord/checkSign >>>>>>
+2020-12-22 14:02:17.830 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 14:02:17.832 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 14:02:17.833 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://gateway.alpha.pinpianyi.cn/ppy-pinpin/visitRecord/checkSign
+headers  : {
+    "User-Agent": "Pinpin/3.7.1.20201023100053 CFNetwork/889.9 Darwin/17.2.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "channel": "app",
+    "appname": "",
+    "Accept-Language": "zh-cn",
+    "platform": "ios",
+    "Content-Type": "application/json",
+    "sessionid": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOm3MUiGgKH+AtHBnQ79B28kQ==",
+    "deviceid": "1F8ED797-D036-4BA3-BEAA-A176B0E08BD6",
+    "Content-Length": "176",
+    "appchannel": "appstore",
+    "servicename": "NEW-PP",
+    "HRUN-Request-ID": "HRUN-44e25f45-5d83-416f-a312-3a466f36593a-937477"
+}
+cookies  : {}
+body     : {
+    "signType": "signIn",
+    "currentLatitude": 0,
+    "currentLongitude": 0,
+    "shopLatitude": "30.263564",
+    "shopLongitude": "120.183406",
+    "shopId": 303848,
+    "signId": null,
+    "shopType": 1
+}
+
+2020-12-22 14:02:17.834 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 06:02:17 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 6200,
+    "msg": "服务调用异常，请稍后重试",
+    "traceMsg": "underlying service internal exception, traceId: null, error occurred at application: ppy-pinpin-app-core, serviceName: checkSignIn",
+    "timestamp": 1608616937,
+    "signType": null,
+    "sign": null,
+    "body": null
+}
+
+2020-12-22 14:02:17.834 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 352.59 ms, response_length: 0 bytes
+2020-12-22 14:02:17.835 | INFO     | httprunner.response:extract:176 - extract mapping: {'check_value': 6200}
+2020-12-22 14:02:17.835 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/visitRecord/checkSign <<<<<<
+

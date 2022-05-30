@@ -1,0 +1,127 @@
+2020-12-22 15:28:28.902 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 全部订单列表, TestCase ID: b6788d3c-cbe2-4a52-bd8a-9f04d86e7852
+2020-12-22 15:28:28.908 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 全部订单列表, TestCase ID: 345e18be-fd7c-438e-bb0d-07117240439f
+2020-12-22 15:28:28.908 | INFO     | httprunner.runner:__run_step:292 - run step begin: /dev2_t/ppy-op-api/order/queryAllOrders >>>>>>
+2020-12-22 15:28:29.013 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 15:28:29.014 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 15:28:29.015 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://web.dev2.pinpianyi.cn/test_t/ppy-op-api/order/queryAllOrders?isPay=&payType=&status=&queryType=&cloudType=&labelCode=&orderSource=&backGoodsType=&settleStatus=&spellZoneCode=&logisticsStatus=&isInsufficient=&orderClassify=&orderNo=2020081315332711613328&pageNum=1&pageSize=25&sort=true
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "e0cdc0ba9ebc4fc68013a7595db470c6",
+    "systemCode": "yypp",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-345e18be-fd7c-438e-bb0d-07117240439f-108909"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 15:28:29.016 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 07:28:29 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, Origin, X-Requested-With, Content-Type, Accept"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: 1608622109019",
+    "timestamp": 1608622109,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "pageNum": 1,
+        "pageSize": 25,
+        "pageCount": 0,
+        "totalSize": 0,
+        "pageData": []
+    }
+}
+
+2020-12-22 15:28:29.017 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 103.65 ms, response_length: 0 bytes
+2020-12-22 15:28:29.017 | INFO     | httprunner.response:extract:176 - extract mapping: {'orderList': []}
+2020-12-22 15:28:29.018 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 15:28:29.018 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 15:28:29.018 | INFO     | httprunner.runner:__run_step:304 - run step end: /dev2_t/ppy-op-api/order/queryAllOrders <<<<<<
+
+2020-12-22 15:28:29.019 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/bingo/Desktop/autotest/httprunnerScripts/logs/345e18be-fd7c-438e-bb0d-07117240439f.run.log
+2020-12-22 15:28:29.020 | INFO     | httprunner.runner:__run_step:292 - run step begin: /dev2_t/ppy-op-api/order/queryAllOrders >>>>>>
+2020-12-22 15:28:29.066 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 15:28:29.066 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 15:28:29.067 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://web.dev2.pinpianyi.cn/test_t/ppy-op-api/order/queryAllOrders?isPay=&payType=&status=&queryType=&cloudType=&labelCode=&orderSource=&backGoodsType=&settleStatus=&spellZoneCode=&logisticsStatus=&isInsufficient=&orderClassify=&orderNo=2020081315332711613328&pageNum=1&pageSize=25&sort=true
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "e0cdc0ba9ebc4fc68013a7595db470c6",
+    "systemCode": "yypp",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-b6788d3c-cbe2-4a52-bd8a-9f04d86e7852-109020"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 15:28:29.068 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 07:28:29 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, Origin, X-Requested-With, Content-Type, Accept"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: 1608622109076",
+    "timestamp": 1608622109,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "pageNum": 1,
+        "pageSize": 25,
+        "pageCount": 0,
+        "totalSize": 0,
+        "pageData": []
+    }
+}
+
+2020-12-22 15:28:29.069 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 45.19 ms, response_length: 0 bytes
+2020-12-22 15:28:29.069 | INFO     | httprunner.response:extract:176 - extract mapping: {'orderList': []}
+2020-12-22 15:28:29.070 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 15:28:29.070 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 15:28:29.070 | INFO     | httprunner.runner:__run_step:304 - run step end: /dev2_t/ppy-op-api/order/queryAllOrders <<<<<<
+

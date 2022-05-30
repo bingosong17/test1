@@ -1,0 +1,124 @@
+2020-12-22 17:01:43.415 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: 435a2222-44be-4879-878a-68c75abff057
+2020-12-22 17:01:43.416 | INFO     | httprunner.runner:__run_step:292 - run step begin: 发送验证码 >>>>>>
+2020-12-22 17:01:43.417 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/user/account/sendSmsCode >>>>>>
+2020-12-22 17:01:43.455 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:01:43.456 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:01:43.456 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://gateway.test.pinpianyi.cn/ppy-pinpin/user/account/sendSmsCode
+headers  : {
+    "User-Agent": "okhttp/3.12.1",
+    "Accept-Encoding": "gzip",
+    "Accept": "*/*",
+    "Connection": "Keep-Alive",
+    "sessionId": "",
+    "serviceName": "NEW-PP",
+    "Content-Length": "25",
+    "Content-Type": "application/json",
+    "Accept-Language": "zh-CN,zh;q=0.8",
+    "deviceId": "3834e10b-cb2a-34c6-85f2-2ae3b365eb14",
+    "HRUN-Request-ID": "HRUN-435a2222-44be-4879-878a-68c75abff057-703418"
+}
+cookies  : {}
+body     : {
+    "mobile": "15757113586"
+}
+
+2020-12-22 17:01:43.457 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:01:43 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1608627703,
+    "signType": null,
+    "sign": null,
+    "body": "success"
+}
+
+2020-12-22 17:01:43.457 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 37.04 ms, response_length: 0 bytes
+2020-12-22 17:01:43.458 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:01:43.458 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:01:43.459 | INFO     | httprunner.response:validate:246 - assert body.body equal success(str)	==> pass
+2020-12-22 17:01:43.459 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/user/account/sendSmsCode <<<<<<
+
+2020-12-22 17:01:43.459 | INFO     | httprunner.runner:__run_step:304 - run step end: 发送验证码 <<<<<<
+
+2020-12-22 17:01:43.460 | INFO     | httprunner.runner:__run_step:292 - run step begin: 账号验证码登录 >>>>>>
+2020-12-22 17:01:43.460 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/user/account/smsLogin >>>>>>
+2020-12-22 17:01:43.496 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:01:43.497 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:01:43.498 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://gateway.test.pinpianyi.cn/ppy-pinpin/user/account/smsLogin?account=15757113586&smsCaptcha=0000
+headers  : {
+    "User-Agent": "okhttp/3.12.1",
+    "Accept-Encoding": "gzip",
+    "Accept": "*/*",
+    "Connection": "Keep-Alive",
+    "serviceName": "NEW-PP",
+    "deviceId": "3834e10b-cb2a-34c6-85f2-2ae3b365eb14",
+    "Content-Type": "application/json",
+    "Accept-Language": "zh-CN,zh;q=0.8",
+    "HRUN-Request-ID": "HRUN-435a2222-44be-4879-878a-68c75abff057-703461"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 17:01:43.500 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:01:43 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1608627703,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "sessionId": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmsJQwWz6JqB+QdoAM1g4dIw==",
+        "key": "6658fe50b1f247f8848929a8481c66fa",
+        "phone": "15757113586",
+        "name": "宁建",
+        "departmentFlag": 1,
+        "position": "BD",
+        "roleId": 123,
+        "id": 1489,
+        "businessLine": 0,
+        "satelliteDashboardH5Url": "https://h5.pinpianyi.cn/h5pinpin/index.html#/dashboard",
+        "isSatelliteBD": false
+    }
+}
+
+2020-12-22 17:01:43.501 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 35.42 ms, response_length: 0 bytes
+2020-12-22 17:01:43.502 | INFO     | httprunner.response:extract:176 - extract mapping: {'session': '+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmsJQwWz6JqB+QdoAM1g4dIw=='}
+2020-12-22 17:01:43.502 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:01:43.503 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:01:43.503 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/user/account/smsLogin <<<<<<
+
+2020-12-22 17:01:43.503 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'session': '+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmsJQwWz6JqB+QdoAM1g4dIw=='}
+2020-12-22 17:01:43.504 | INFO     | httprunner.runner:__run_step:304 - run step end: 账号验证码登录 <<<<<<
+

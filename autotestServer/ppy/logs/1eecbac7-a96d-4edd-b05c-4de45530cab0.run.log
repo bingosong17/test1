@@ -1,0 +1,374 @@
+2020-12-22 17:17:33.222 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: 1eecbac7-a96d-4edd-b05c-4de45530cab0
+2020-12-22 17:17:33.228 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 私海店铺查询, TestCase ID: 3dd66c60-82a0-4fb3-acdc-ceb023b75a66
+2020-12-22 17:17:33.232 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: ace4318b-792e-4ebd-9746-79140cc88638
+2020-12-22 17:17:33.233 | INFO     | httprunner.runner:__run_step:292 - run step begin: 发送验证码 >>>>>>
+2020-12-22 17:17:33.234 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/user/account/sendSmsCode >>>>>>
+2020-12-22 17:17:33.268 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:17:33.270 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:17:33.271 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://gateway.test.pinpianyi.cn/ppy-pinpin/user/account/sendSmsCode
+headers  : {
+    "User-Agent": "okhttp/3.12.1",
+    "Accept-Encoding": "gzip",
+    "Accept": "*/*",
+    "Connection": "Keep-Alive",
+    "sessionId": "",
+    "serviceName": "NEW-PP",
+    "Content-Length": "25",
+    "Content-Type": "application/json",
+    "Accept-Language": "zh-CN,zh;q=0.8",
+    "deviceId": "3834e10b-cb2a-34c6-85f2-2ae3b365eb14",
+    "HRUN-Request-ID": "HRUN-ace4318b-792e-4ebd-9746-79140cc88638-653235"
+}
+cookies  : {}
+body     : {
+    "mobile": "15757113586"
+}
+
+2020-12-22 17:17:33.272 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:17:33 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1608628653,
+    "signType": null,
+    "sign": null,
+    "body": "success"
+}
+
+2020-12-22 17:17:33.273 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 33.77 ms, response_length: 0 bytes
+2020-12-22 17:17:33.274 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:17:33.274 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:17:33.274 | INFO     | httprunner.response:validate:246 - assert body.body equal success(str)	==> pass
+2020-12-22 17:17:33.275 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/user/account/sendSmsCode <<<<<<
+
+2020-12-22 17:17:33.275 | INFO     | httprunner.runner:__run_step:304 - run step end: 发送验证码 <<<<<<
+
+2020-12-22 17:17:33.276 | INFO     | httprunner.runner:__run_step:292 - run step begin: 账号验证码登录 >>>>>>
+2020-12-22 17:17:33.276 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/user/account/smsLogin >>>>>>
+2020-12-22 17:17:33.308 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:17:33.309 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:17:33.310 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://gateway.test.pinpianyi.cn/ppy-pinpin/user/account/smsLogin?account=15757113586&smsCaptcha=0000
+headers  : {
+    "User-Agent": "okhttp/3.12.1",
+    "Accept-Encoding": "gzip",
+    "Accept": "*/*",
+    "Connection": "Keep-Alive",
+    "serviceName": "NEW-PP",
+    "deviceId": "3834e10b-cb2a-34c6-85f2-2ae3b365eb14",
+    "Content-Type": "application/json",
+    "Accept-Language": "zh-CN,zh;q=0.8",
+    "HRUN-Request-ID": "HRUN-ace4318b-792e-4ebd-9746-79140cc88638-653277"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 17:17:33.311 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:17:33 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1608628653,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "sessionId": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmVORMrq0mQ4fW8uGlxNGu9A==",
+        "key": "96acdd92709a4e6c9ad48efbe89c68ea",
+        "phone": "15757113586",
+        "name": "宁建",
+        "departmentFlag": 1,
+        "position": "BD",
+        "roleId": 123,
+        "id": 1489,
+        "businessLine": 0,
+        "satelliteDashboardH5Url": "https://h5.pinpianyi.cn/h5pinpin/index.html#/dashboard",
+        "isSatelliteBD": false
+    }
+}
+
+2020-12-22 17:17:33.312 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 30.69 ms, response_length: 0 bytes
+2020-12-22 17:17:33.313 | INFO     | httprunner.response:extract:176 - extract mapping: {'session': '+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmVORMrq0mQ4fW8uGlxNGu9A=='}
+2020-12-22 17:17:33.313 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:17:33.314 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:17:33.314 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/user/account/smsLogin <<<<<<
+
+2020-12-22 17:17:33.314 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'session': '+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmVORMrq0mQ4fW8uGlxNGu9A=='}
+2020-12-22 17:17:33.315 | INFO     | httprunner.runner:__run_step:304 - run step end: 账号验证码登录 <<<<<<
+
+2020-12-22 17:17:33.317 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/bingo/Desktop/autotest/httprunnerScripts/logs/ace4318b-792e-4ebd-9746-79140cc88638.run.log
+2020-12-22 17:17:33.321 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/myCustomer/shopList >>>>>>
+2020-12-22 17:17:33.368 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:17:33.369 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:17:33.370 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://gateway.test.pinpianyi.cn/ppy-pinpin/myCustomer/shopList
+headers  : {
+    "User-Agent": "Pinpin/3.7.0 (iPhone; iOS 11.1.2; Scale/3.00)",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Accept-Language": "zh-Hans-CN;q=1",
+    "Content-Type": "application/json",
+    "sessionId": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmVORMrq0mQ4fW8uGlxNGu9A==",
+    "deviceId": "0380efdbdb0938af0d7a3852519f361a86ff",
+    "Content-Length": "155",
+    "serviceName": "NEW-PP",
+    "HRUN-Request-ID": "HRUN-3dd66c60-82a0-4fb3-acdc-ceb023b75a66-653321"
+}
+cookies  : {}
+body     : {
+    "status": 1,
+    "pageSize": 100,
+    "longitude": "",
+    "manyDayNotOrder": 0,
+    "userSignStatus": 0,
+    "latitude": "",
+    "type": "1",
+    "manyDayNotLogin": 0,
+    "pageNum": 1
+}
+
+2020-12-22 17:17:33.371 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:17:33 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1608628653,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "pageNum": null,
+        "pageSize": null,
+        "pageCount": null,
+        "totalSize": null,
+        "pageData": []
+    }
+}
+
+2020-12-22 17:17:33.372 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 46.48 ms, response_length: 0 bytes
+2020-12-22 17:17:33.373 | INFO     | httprunner.response:extract:176 - extract mapping: {'pageData': [], 'longitude': None, 'latitude': None}
+2020-12-22 17:17:33.374 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:17:33.375 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:17:33.375 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/myCustomer/shopList <<<<<<
+
+2020-12-22 17:17:33.376 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/bingo/Desktop/autotest/httprunnerScripts/logs/3dd66c60-82a0-4fb3-acdc-ceb023b75a66.run.log
+2020-12-22 17:17:33.377 | INFO     | httprunner.runner:__run_step:292 - run step begin: 私海店铺拜访未离店 >>>>>>
+2020-12-22 17:17:33.383 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 查询基础数据, TestCase ID: 10336090-7322-4033-9bbb-b656f0296181
+2020-12-22 17:17:33.383 | INFO     | httprunner.runner:__run_step:292 - run step begin: /ppy-pinpin/stats/common >>>>>>
+2020-12-22 17:17:34.345 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:17:34.346 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:17:34.347 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://gateway.test.pinpianyi.cn/ppy-pinpin/stats/common
+headers  : {
+    "User-Agent": "Pinpin/3.7.0 (iPhone; iOS 11.1.2; Scale/3.00)",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "+HgNn4tK36nYe+JgH8nB2+LKLYbib04xCLl8d1BOKhxR/G6YMzznr5kZNoM+qbswB406+SRjZryYtGTAI6cxU0hA+RihbcxE9ZpapqpxAt2HmQYavGbrFpktoT5SxBOmVORMrq0mQ4fW8uGlxNGu9A==",
+    "deviceId": "0380efdbdb0938af0d7a3852519f361a86ff",
+    "serviceName": "NEW-PP",
+    "Content-Type": "application/json",
+    "Accept-Language": "zh-Hans-CN;q=1",
+    "HRUN-Request-ID": "HRUN-10336090-7322-4033-9bbb-b656f0296181-653384"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 17:17:34.348 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:17:34 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1608628654,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "rank": 2,
+        "unSign": 7,
+        "shops": 43,
+        "sevenDays": 43,
+        "thirtyDays": 43,
+        "orderShops": 0
+    }
+}
+
+2020-12-22 17:17:34.349 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 961.11 ms, response_length: 0 bytes
+2020-12-22 17:17:34.349 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:17:34.349 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:17:34.350 | INFO     | httprunner.runner:__run_step:304 - run step end: /ppy-pinpin/stats/common <<<<<<
+
+2020-12-22 17:17:34.351 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/bingo/Desktop/autotest/httprunnerScripts/logs/10336090-7322-4033-9bbb-b656f0296181.run.log
+2020-12-22 17:17:34.357 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: 全部订单列表, TestCase ID: 94c51801-0f50-4b87-a8e0-45255e58791c
+2020-12-22 17:17:34.358 | INFO     | httprunner.runner:__run_step:292 - run step begin: /dev2_t/ppy-op-api/order/queryAllOrders >>>>>>
+2020-12-22 17:17:34.469 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'WrappedSocket' object has no attribute 'getsockname'
+2020-12-22 17:17:34.479 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'WrappedSocket' object has no attribute 'getpeername'
+2020-12-22 17:17:34.488 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : https://web.dev2.pinpianyi.cn/test_t/ppy-op-api/order/queryAllOrders?isPay=&payType=&status=&queryType=&cloudType=&labelCode=&orderSource=&backGoodsType=&settleStatus=&spellZoneCode=&logisticsStatus=&isInsufficient=&orderClassify=&orderNo=2020081315332711613328&pageNum=1&pageSize=25&sort=true
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "sessionId": "195530c063374c1db4a526175e85676b",
+    "systemCode": "yypp",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-94c51801-0f50-4b87-a8e0-45255e58791c-654358"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 17:17:34.493 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.16.1",
+    "Date": "Tue, 22 Dec 2020 09:17:34 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, Origin, X-Requested-With, Content-Type, Accept"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: 1608628654535",
+    "timestamp": 1608628654,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "pageNum": 1,
+        "pageSize": 25,
+        "pageCount": 0,
+        "totalSize": 0,
+        "pageData": []
+    }
+}
+
+2020-12-22 17:17:34.495 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 110.92 ms, response_length: 0 bytes
+2020-12-22 17:17:34.499 | INFO     | httprunner.response:extract:176 - extract mapping: {'orderList': []}
+2020-12-22 17:17:34.500 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-12-22 17:17:34.501 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-12-22 17:17:34.502 | INFO     | httprunner.runner:__run_step:304 - run step end: /dev2_t/ppy-op-api/order/queryAllOrders <<<<<<
+
+2020-12-22 17:17:34.503 | INFO     | httprunner.runner:test_start:460 - generate testcase log: /Users/bingo/Desktop/autotest/httprunnerScripts/logs/94c51801-0f50-4b87-a8e0-45255e58791c.run.log
+2020-12-22 17:17:34.507 | INFO     | httprunner.runner:__run_step:292 - run step begin: 商铺明细 >>>>>>
+2020-12-22 17:17:34.508 | INFO     | httprunner.runner:__run_step:292 - run step begin: /test_t/mall/user/shopDetail >>>>>>
+2020-12-22 17:18:34.538 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'connection'
+2020-12-22 17:18:34.538 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'connection'
+2020-12-22 17:18:34.539 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://web.dev2.pinpianyi.cn/test_t/mall/user/shopDetail
+headers  : {
+    "Content-Length": "0"
+}
+cookies  : {}
+body     : None
+
+2020-12-22 17:18:34.541 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 0
+headers  : {}
+cookies  : {}
+encoding : None
+content_type : 
+body     : 
+
+2020-12-22 17:18:34.541 | ERROR    | httprunner.client:request:215 - ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2020-12-22 17:18:34.541 | INFO     | httprunner.response:extract:176 - extract mapping: {'longitude': None, 'latitude': None}
+2020-12-22 17:18:34.542 | ERROR    | httprunner.response:validate:263 - assert status_code equal 200(int)	==> fail
+check_item: status_code
+check_value: 0(int)
+assert_method: equal
+expect_value: 200(int)
+2020-12-22 17:18:34.542 | ERROR    | httprunner.response:validate:263 - assert body.statusCode equal 2000(int)	==> fail
+check_item: body.statusCode
+check_value: None(NoneType)
+assert_method: equal
+expect_value: 2000(int)
+2020-12-22 17:18:34.543 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: https://web.dev2.pinpianyi.cn/test_t/mall/user/shopDetail
+method: POST
+headers: {'Connection': 'keep-alive', 'Content-Length': '13', 'sessionId': '195530c063374c1db4a526175e85676b', 'systemCode': 'yypp', 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': '*/*', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7', 'HRUN-Request-ID': 'HRUN-1eecbac7-a96d-4edd-b05c-4de45530cab0-654510'}
+params: {}
+data: {'shopId': None}
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 0
+headers: {}
+body: ''
+

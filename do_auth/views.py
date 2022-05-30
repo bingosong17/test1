@@ -1,6 +1,8 @@
+import os
 from datetime import datetime
 
 from django.contrib.auth import authenticate, login
+from django.http import StreamingHttpResponse
 from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.parsers import MultiPartParser
@@ -72,3 +74,27 @@ class UploadView(APIView):
                 destination.close()
 
         return Response({"msg": "上传成功"}, status=status.HTTP_200_OK)
+
+
+class DownloadView(APIView):
+    def get(self, request):
+        def file_iterator(file_name, chunk_size=512):
+            with open(file_name, 'rb') as f:
+                while True:
+                    c = f.read(chunk_size)
+                    if c:
+                        yield c
+                    else:
+                        break
+
+        # 指定需要下载的文件
+        download_file = '/Users/bingo/Desktop/practiceProject/test1/manage1.py'
+        if not os.path.exists(download_file):
+            return Response({"msg": "文件不存在"}, status=status.HTTP_503_SERVICE_UNAVAILABLE)
+        # 将服务器上的文件，通过文件流传输到浏览器
+        response = StreamingHttpResponse(file_iterator(download_file))
+        # 让文件流写入硬盘，需要对下面两个字段赋值
+        response['Content-Type'] = 'application/octet-stream'
+        response['Content-Disposition'] = 'attachment;filename="{0}"'.format('manage.py')
+
+        return response

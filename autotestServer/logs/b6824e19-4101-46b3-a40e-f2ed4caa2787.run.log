@@ -1,0 +1,308 @@
+2020-08-15 00:22:17.526 | INFO     | httprunner.runner:test_start:451 - Start to run testcase: testcase description, TestCase ID: b6824e19-4101-46b3-a40e-f2ed4caa2787
+2020-08-15 00:22:17.529 | INFO     | httprunner.runner:__run_step:292 - run step begin: 用户登陆 >>>>>>
+2020-08-15 00:22:17.534 | INFO     | httprunner.runner:__run_step:292 - run step begin: 用户登陆 >>>>>>
+2020-08-15 00:22:18.323 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 64865
+2020-08-15 00:22:18.323 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2020-08-15 00:22:18.324 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://web.dev2.pinpianyi.cn/dev2_t/ppy-auth/api/login/loginCheckUser
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "66",
+    "sessionId": "",
+    "systemCode": "yypp",
+    "Content-Type": "application/json",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-b6824e19-4101-46b3-a40e-f2ed4caa2787-137536"
+}
+cookies  : {}
+body     : {
+    "mobile": "13898412293",
+    "passwd": "wangxue123321",
+    "flag": true
+}
+
+2020-08-15 00:22:18.326 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.12.2",
+    "Date": "Fri, 14 Aug 2020 16:22:18 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, systemCode, Origin, X-Requested-With, Content-Type, Accept",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1597422138,
+    "signType": null,
+    "sign": null,
+    "body": [
+        {
+            "cityCode": "330100",
+            "cityName": "\u676d\u5dde\u7ad9"
+        },
+        {
+            "cityCode": "330200",
+            "cityName": "\u5b81\u6ce2\u7ad9"
+        },
+        {
+            "cityCode": "420100",
+            "cityName": "\u6b66\u6c49\u7ad9"
+        },
+        {
+            "cityCode": "110100",
+            "cityName": "\u5317\u4eac\u7ad9"
+        },
+        {
+            "cityCode": "310100",
+            "cityName": "\u4e0a\u6d77\u7ad9"
+        },
+        {
+            "cityCode": "320500",
+            "cityName": "\u82cf\u5dde\u7ad9"
+        },
+        {
+            "cityCode": "330600",
+            "cityName": "\u7ecd\u5174\u7ad9"
+        },
+        {
+            "cityCode": "440100",
+            "cityName": "\u5e7f\u5dde\u7ad9"
+        },
+        {
+            "cityCode": "320400",
+            "cityName": "\u5e38\u5dde\u7ad9"
+        },
+        {
+            "cityCode": "320200",
+            "cityName": "\u65e0\u9521\u7ad9"
+        },
+        {
+            "cityCode": "410100",
+            "cityName": "\u90d1\u5dde\u7ad9"
+        },
+        {
+            "cityCode": "510100",
+            "cityName": "\u6210\u90fd\u7ad9"
+        },
+        {
+            "cityCode": "320100",
+            "cityName": "\u5357\u4eac\u7ad9"
+        },
+        {
+            "cityCode": "440600",
+            "cityName": "\u4f5b\u5c71\u7ad9"
+        },
+        {
+            "cityCode": "100001",
+            "cityName": "\u62fc\u4fbf\u5b9c\u7ad9"
+        }
+    ]
+}
+
+2020-08-15 00:22:18.326 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 786.75 ms, response_length: 0 bytes
+2020-08-15 00:22:18.327 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-15 00:22:18.327 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-08-15 00:22:18.328 | INFO     | httprunner.runner:__run_step:304 - run step end: 用户登陆 <<<<<<
+
+2020-08-15 00:22:18.328 | INFO     | httprunner.runner:__run_step:292 - run step begin: 选择城市 >>>>>>
+2020-08-15 00:22:19.019 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 64865
+2020-08-15 00:22:19.020 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2020-08-15 00:22:19.021 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://web.dev2.pinpianyi.cn/dev2_t/ppy-auth/api/login/doLogin
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "88",
+    "sessionId": "",
+    "systemCode": "yypp",
+    "Content-Type": "application/json",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-b6824e19-4101-46b3-a40e-f2ed4caa2787-138329"
+}
+cookies  : {}
+body     : {
+    "mobile": "13898412293",
+    "passwd": "wangxue123321",
+    "flag": true,
+    "cityCode": "330100"
+}
+
+2020-08-15 00:22:19.022 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.12.2",
+    "Date": "Fri, 14 Aug 2020 16:22:19 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, systemCode, Origin, X-Requested-With, Content-Type, Accept",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: null",
+    "timestamp": 1597422138,
+    "signType": null,
+    "sign": null,
+    "body": "e6d92bd4de2d4f9ea0d27777d29dcc16"
+}
+
+2020-08-15 00:22:19.023 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 690.52 ms, response_length: 0 bytes
+2020-08-15 00:22:19.023 | INFO     | httprunner.response:extract:176 - extract mapping: {'session': 'e6d92bd4de2d4f9ea0d27777d29dcc16'}
+2020-08-15 00:22:19.023 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-15 00:22:19.024 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-08-15 00:22:19.024 | INFO     | httprunner.runner:__run_step:304 - run step end: 选择城市 <<<<<<
+
+2020-08-15 00:22:19.025 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'session': 'e6d92bd4de2d4f9ea0d27777d29dcc16'}
+2020-08-15 00:22:19.025 | INFO     | httprunner.runner:__run_step:304 - run step end: 用户登陆 <<<<<<
+
+2020-08-15 00:22:19.025 | INFO     | httprunner.runner:__run_step:292 - run step begin: 查看运单列表 >>>>>>
+2020-08-15 00:22:19.026 | INFO     | httprunner.runner:__run_step:292 - run step begin: /logis/mng/transportationOrder/list >>>>>>
+2020-08-15 00:22:19.617 | DEBUG    | httprunner.client:request:186 - client IP: 127.0.0.1, Port: 64877
+2020-08-15 00:22:19.617 | DEBUG    | httprunner.client:request:194 - server IP: 127.0.0.1, Port: 8888
+2020-08-15 00:22:19.619 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : POST
+url      : https://webapi.dev2.pinpianyi.cn/logis/mng/transportationOrder/list
+headers  : {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "application/json, text/plain, */*",
+    "Connection": "keep-alive",
+    "Content-Length": "373",
+    "key": "",
+    "sessionId": "e6d92bd4de2d4f9ea0d27777d29dcc16",
+    "Content-Type": "application/json",
+    "Sec-Fetch-Site": "same-site",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "Accept-Language": "zh-CN,zh;q=0.9,zh-TW;q=0.8,en;q=0.7",
+    "HRUN-Request-ID": "HRUN-b6824e19-4101-46b3-a40e-f2ed4caa2787-139026"
+}
+cookies  : {}
+body     : {
+    "cityCode": "330100",
+    "transOrderId": null,
+    "orderNo": "2020081417331211611694",
+    "driverName": null,
+    "driverId": null,
+    "driverPhoneNumber": null,
+    "id": null,
+    "startTime": null,
+    "endTime": null,
+    "pageNum": 1,
+    "plannedStartTime": "",
+    "plannedEndTime": "",
+    "pageSize": 10,
+    "transOrderStatus": "",
+    "sortRule": "101",
+    "type": null,
+    "driverTypeList": null,
+    "zoneCodeList": null
+}
+
+2020-08-15 00:22:19.620 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Server": "nginx/1.12.2",
+    "Date": "Fri, 14 Aug 2020 16:22:19 GMT",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE, PATCH",
+    "Access-Control-Max-Age": "3600",
+    "Access-Control-Allow-Headers": "Authorization, sign, sessionId, key, Origin, X-Requested-With, Content-Type, Accept",
+    "Connection": "keep-alive"
+}
+cookies  : {}
+encoding : UTF-8
+content_type : application/json;charset=UTF-8
+body     : {
+    "statusCode": 2000,
+    "msg": null,
+    "traceMsg": "traceId: 1597422139261",
+    "timestamp": 1597422139,
+    "signType": null,
+    "sign": null,
+    "body": {
+        "pageNum": 1,
+        "pageSize": 10,
+        "pageCount": 1,
+        "totalSize": 1,
+        "pageData": [
+            {
+                "id": "1141976231122351867",
+                "displayId": "2008141141976231122351867",
+                "driverName": "\u5468\u78ca",
+                "phoneNumber": "18053761865",
+                "licensePlateNumber": "\u6d59ADH6509",
+                "orderNum": 1,
+                "status": 600,
+                "expectedIncome": "12.07",
+                "settleIncome": null,
+                "startTime": null,
+                "deliverFinishTime": null,
+                "thumbnailURL": null,
+                "operationLogs": null,
+                "createTime": "2020-08-14T09:33:44.000+0000",
+                "receiptTime": null,
+                "planningMileage": "3347",
+                "driverLocationVO": null,
+                "driverId": 823,
+                "vehicleType": 13,
+                "plannedStartTime": "2020-08-14T11:33:00.000+0000",
+                "goodsNum": 10,
+                "suppliers": "\u62fc\u4fbf\u5b9c\u4f9b\u5e94\u94fe(\u81ea\u5907\u4ed3)",
+                "volumeRate": 5.02,
+                "pickupPointAmount": 1,
+                "supplierList": [
+                    "\u62fc\u4fbf\u5b9c\u4f9b\u5e94\u94fe(\u81ea\u5907\u4ed3)"
+                ],
+                "zoneCode": "3310003"
+            }
+        ]
+    }
+}
+
+2020-08-15 00:22:19.620 | INFO     | httprunner.client:request:218 - status_code: 200, response_time(ms): 590.22 ms, response_length: 0 bytes
+2020-08-15 00:22:19.621 | INFO     | httprunner.response:extract:176 - extract mapping: {'transOrderId': '1141976231122351867', 'phoneNumber': '18053761865'}
+2020-08-15 00:22:19.622 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-08-15 00:22:19.622 | INFO     | httprunner.response:validate:246 - assert body.statusCode equal 2000(int)	==> pass
+2020-08-15 00:22:19.622 | INFO     | httprunner.runner:__run_step:304 - run step end: /logis/mng/transportationOrder/list <<<<<<
+
+2020-08-15 00:22:19.622 | INFO     | httprunner.runner:__run_step_testcase:286 - export variables: {'transOrderId': '1141976231122351867', 'phoneNumber': '18053761865'}
+2020-08-15 00:22:19.623 | INFO     | httprunner.runner:__run_step:304 - run step end: 查看运单列表 <<<<<<
+

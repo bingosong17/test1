@@ -1,0 +1,2 @@
+1、修改httprunner/client.py 中内容，解决log中文乱码问题
+2、修改pytest-html/pytest_html/plugin.py内容，解决html中中文乱码问题
